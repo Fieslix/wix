@@ -273,9 +273,7 @@ namespace WixToolset.Core.CommandLine
 
         private bool RequiresEulaAcceptance(ICommandLineCommand command)
         {
-            return !(command is HelpCommand) &&
-                   !(command is VersionCommand) &&
-                   !(command is EulaCommand);
+            return false;
         }
 
         private void ParseSuppressWarning(string parameter, int offset, ICommandLineParser parser)

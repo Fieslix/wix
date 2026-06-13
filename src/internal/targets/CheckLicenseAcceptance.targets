@@ -5,7 +5,8 @@
 
   <Target
     Name="CheckWix8LicenseAcceptance"
-    BeforeTargets="CoreCompile">
+    BeforeTargets="CoreCompile"
+    Condition=" 'false' == 'true' ">
 
     <ItemGroup>
       <_AcceptEula Include="$(AcceptEula)" />
@@ -24,7 +25,7 @@
       Code="WIX7015"
       File="$(MSBuildProjectFile)"
       HelpLink="https://wixtoolset.org/osmf"
-      Condition=" '@(_Wix8LicenseAccepted)' == '' and !Exists('$(_Wix8EulaFile)')" />
+      Condition=" 'false' == 'true' " />
   </Target>
 
 </Project>

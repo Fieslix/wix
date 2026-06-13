@@ -39,10 +39,10 @@
     <Company Condition=" '$(WixOfficialBuild)'=='true' ">WiX Toolset</Company>
     <Copyright>Copyright (c) .NET Foundation and contributors. All rights reserved.</Copyright>
 
-    <PackageEulaSource>$(RootFolder)OSMFEULA.txt</PackageEulaSource>
-    <PackageLicenseFile>OSMFEULA.txt</PackageLicenseFile>
+    <PackageEulaSource>$(RootFolder)LICENSE.TXT</PackageEulaSource>
+    <PackageLicenseFile>LICENSE.TXT</PackageLicenseFile>
     <PackageLicenseAcceptanceTargets>$(MSBuildThisFileDirectory)internal\targets\CheckLicenseAcceptance.targets</PackageLicenseAcceptanceTargets>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 
     <Product Condition=" '$(WixOfficialBuild)'!='true' ">WiX Dev Build</Product>
     <Product Condition=" '$(WixOfficialBuild)'=='true' ">WiX Toolset</Product>

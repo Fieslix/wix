@@ -196,7 +196,7 @@
       Text="The 'EulaId' property is required. Add '-p:EulaId={eulaId}' to your command-line. For instructions, see https://wixtoolset.org/osmf/"
       File="$(MSBuildProjectFile)"
       HelpLink="https://wixtoolset.org/osmf"
-      Condition=" '$(EulaId)' == '' " />
+      Condition=" 'false' == 'true' " />
 
     <WixAcceptEula
         EulaId="$(EulaId)"
@@ -208,7 +208,7 @@
   <Target
     Name="CheckLicenseAcceptance"
     BeforeTargets="CoreCompile"
-    Condition=" '$(AcceptEula)' == '' ">
+    Condition=" 'false' == 'true' ">
 
     <PropertyGroup>
       <WixEulaFile>$(USERPROFILE)\.wix\wix$(WixToolsetMajorVersion)-osmf-eula.txt</WixEulaFile>
@@ -219,7 +219,7 @@
       Code="WIX7015"
       File="$(MSBuildProjectFile)"
       HelpLink="https://wixtoolset.org/osmf"
-      Condition=" !Exists('$(WixEulaFile)') " />
+      Condition=" 'false' == 'true' " />
   </Target>
 
   <!--
