@@ -6,8 +6,8 @@
     <title>$title$</title>
     <description>$description$</description>
     <authors>$authors$</authors>
-    <license type="file">OSMFEULA.txt</license>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MS-RL</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>$packageTags$</tags>
     <copyright>$copyright$</copyright>
     <projectUrl>$projectUrl$</projectUrl>
